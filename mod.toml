@@ -1,16 +1,17 @@
 [manifest]
 id = "OSRAuto"
 version = "1.0.0"
-display_name = "Open Speed Run(OSR) Autosplitter"
-description = "An autosplitter for OSR to be used in conjunction with the client in the github"
-short_description = "An autosplitter for OSR to be used in conjunction with the client in the github"
+display_name = "Open Speed Run(OSR) Autosplitter(linux)"
+description = "A Autosplitter to be used with the linux side of open speed run."
+short_description = "An autosplitter for OSR."
 authors = [ "Kazii The Avali" ]
 game_id = "dk64"
 minimum_recomp_version = "1.0.0"
+dependencies = ["RecompExternalPython_API:2.0.0"]
 
 [inputs]
 elf_path = "build/mod.elf"
 mod_filename = "OSRAuto"
 func_reference_syms_file = "Dk64Syms/dump.toml"
 data_reference_syms_files = [ "Dk64Syms/data_dump.toml" ]
-additional_files = ["thumb.dds"]
+additional_files = ["thumb.dds","src/connector.py"]
