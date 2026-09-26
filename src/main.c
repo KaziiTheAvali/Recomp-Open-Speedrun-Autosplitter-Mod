@@ -2,3 +2,5 @@
 #include "ultra64.h"
 #include "enums.h"
 #include "common_structs.h"
+#include "repy_api.h"
+#include "recompconfig.h"
