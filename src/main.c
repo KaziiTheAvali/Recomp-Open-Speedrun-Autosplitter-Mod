@@ -11,11 +11,24 @@ extern Actor *gCurrentActorPointer;
 
 
 
+void star_timer() {
+    REPY_FN_SETUP;
+    REPY_FN_SET_STR("command","start");
+    REPY_FN_IMPORT("connector");
+    REPY_FN_EXEC_CACHE(start_timer,"connector.send_command(command)\n");
+    REPY_FN_CLEANUP;
+}
 
-RECOMP_HOOK("func_gloabl_asm_80680908") void split_on_barrel_break() {
+
+RECOMP_CALLBACK("*", recomp_on_new_file_start) void NewFileStartTimer(void) {
+    star_timer();
+    recomp_printf("test");
+}
+
+RECOMP_HOOK("func_global_asm_80680908") void split_on_barrel_break() {
     if (gCurrentActorPointer) {
         if (gCurrentActorPointer->control_state==0xC) {
-            recomp_printf("Test");
+            star_timer();
         }
     }
 }

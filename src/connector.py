@@ -12,3 +12,7 @@ def send_command(command):
             client.sendall(full_command.encode())
     except ConnectionRefusedError:
         print("The connection refused. check if open speed run is running. ")
+
+
+def test():
+    print("test")
