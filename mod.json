@@ -1,0 +1,15 @@
+{
+    "authors" : [
+        "Kazii The Avali"
+    ],
+    "dependencies" : [
+        "RecompExternalPython_API:2.0.0"
+    ],
+    "description" : "A Autosplitter to be used with the linux side of open speed run.",
+    "display_name" : "Open Speed Run(OSR) Autosplitter(linux)",
+    "game_id" : "dk64",
+    "id" : "OSRAuto",
+    "minimum_recomp_version" : "1.0.0",
+    "short_description" : "An autosplitter for OSR.",
+    "version" : "1.0.0"
+}
