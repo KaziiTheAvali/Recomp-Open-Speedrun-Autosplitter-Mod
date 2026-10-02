@@ -40,5 +40,9 @@ RECOMP_CALLBACK("*", recomp_on_new_file_start) void NewFileStartTimer(void) {
 //im gonna continue working on stuff till i (or someone else) can figure it out
 
 RECOMP_HOOK("func_global_asm_80680908") void split_on_barrel_break() {
-
+    if (gCurrentActorPointer) {
+        if (gCurrentActorPointer->control_state) {
+            recomp_printf("test");
+        }
+    }
 }
