@@ -6,8 +6,9 @@ NOTE: due to how osr works windows will not work. Mac is untested
 ## Installation
 1. Download the latest `OSRAuto.nrm` from Releases.
 2. Put the file in your DK64 Recompiled mods folder.
-   - Example (Windows): `C:\Users\<YourUser>\AppData\Local\DK64Recompiled\mods`
+   - Example (Linux): `/home/<your username>/.config/DK64Recompiled/mods/`
 3. Launch DK64 Recompiled and enable the mod from the mods menu.
+4. Launch [OpenSpeedRun](https://srwither.github.io/OpenSpeedRun-Site/)
 
 ## Build mod Requirements
 - `clang`
@@ -35,24 +36,17 @@ Then package the mod:
 RecompModTool mod.toml C:/path/to/DK64Recompiled/mods
 ```
 
-PowerShell example:
-
-```powershell
-.\RecompModTool.exe .\mod.toml C:\Users\<YourUser>\AppData\Local\DK64Recompiled\mods
-```
-
 The produced mod file is named `OSRAuto.nrm`.
 
 ## Project Layout
-- `src/main,c`: Main gameplay patch logic.
+- `src/main.c`: Main gameplay patch logic.
+- `src/connector.py` Connector script, deals with connectin to unix socket
 - `mod.toml`: Mod metadata, target game id, and packaging inputs.
 - `dk64_decomp/`: Decompiled DK64 source and headers used by the build.
 - `Dk64Syms/`: Symbol files used by RecompModTool.
-- `connector_src/`: Connector script. 
 
 ## Credits
 See `authors` in `mod.toml` for the full contributor list included in the mod manifest.
 
 ## AI Disclosure
-
 **NO ai was used while creating this mod.** my mods will never use ai and ai contributions will not be allowed.
