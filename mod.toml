@@ -9,6 +9,25 @@ game_id = "dk64"
 minimum_recomp_version = "1.0.0"
 dependencies = ["RecompExternalPython_API:2.0.0"]
 
+[[manifest.config_options]]
+id = "start_on_newgame"
+name = "starts when a fresh file is loaded"
+description = "Starts when a clean file is loaded. usefull if you load in the game befor starting the timer (for example archipelago) "
+type = "Enum"
+options = ["Disabled", "Enabled"]
+default = "Enabled"
+
+[[manifest.config_options]]
+id = "split_on_krool_defeated"
+name = "Split when krool is defeated"
+description = "Splits on the krool end cutscene. Disable if you want to manually split for some reason. "
+type = "Enum"
+options = ["Disabled", "Enabled"]
+default = "Enabled"
+
+
+
+
 [inputs]
 elf_path = "build/mod.elf"
 mod_filename = "OSRAuto"
